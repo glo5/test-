@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <form action="/empInsert" method="post">
+            <table>
+                <tr>
+                    <td>사원번호</td>
+                    <td><input type="number" name="empno" value="${no}" readonly></td>
+                </tr>
+                <tr>
+                    <td>사원이름</td>
+                    <td><input type="text" name="empname" ></td>
+                </tr>
+                <tr>
+                    <td>입사일자</td>
+                    <td><input type="date" name="joindate"></td>
+                </tr>
+                <tr>
+                    <td>직급</td>
+                    <td><select name="rank" id="rank">
+                        <option value="A">사원</option>
+                        <option value="B">대리</option>
+                        <option value="C">과장</option>
+                    </select>
+                </td>
+                </tr>
+                <tr>
+                    <td>부서</td>
+                    <input type="radio"  name ="man" >
+                    <label for="하이>"></label>
+                    <td>
+                     
+                    
+                </td>
+                </tr>
+                <tr>
+                    <td colspan="2" align="center"><input type="submit" value="등록" onclick="return checkForm()" ></td>
+                </tr>
+
+            </table>
+        </form>
+        <script>
+           function checkForm(){
+               const d = document;
+               if(d.frm.empname.value.trim() == ""){
+                   alert("사원 이름을 입력하세요");
+                   d.frm.alert.focus();
+                   return false;
+               }
+           }
+
+        </script>
+</body>
+</html>
